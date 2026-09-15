@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylist Man | Headline Hair Salon</title>
+  <style>
+    :root {
+      --bg: #F7F4EE;
+      --card-bg: #FFFFFF;
+      --text-main: #3C2A21;
+      --text-muted: #7D6E65;
+      --accent: #5C4033;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      padding: 30px 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 390px;
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(60, 42, 33, 0.05);
+      text-align: center;
+    }
+    .brand {
+      letter-spacing: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #EAE5DC;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--accent);
+    }
+    h1 { font-size: 22px; margin-bottom: 4px; }
+    p.sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+    .btn-save {
+      display: block;
+      background: var(--accent);
+      color: #FFF;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px;
+      border: 1px solid #EAE5DC;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .footer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">HEADLINE HAIR SALON</div>
+    <div class="avatar">✂️</div>
+    <h1>Stylist Man</h1>
+    <p class="sub">Senior Stylist & Co-Founder<br>15+ Years Experience</p>
+
+    <a href="contact.vcf" class="btn-save" download>＋ Save to Contacts / 存入通訊錄</a>
+
+    <div class="links">
+      <a href="https://wa.me/85269991747?text=Hi%20Man%2C%20I%20would%20like%20to%20book%20an%20appointment" class="link-item">💬 WhatsApp Direct Booking</a>
+      <a href="https://www.instagram.com/headline__hair" class="link-item">📸 Instagram Portfolio</a>
+      <a href="https://maps.google.com/?q=50+Jervois+Street+Sheung+Wan+Hong+Kong" class="link-item">📍 Find Us in Sheung Wan</a>
+    </div>
+
+    <div class="footer">
+      50 Jervois Street, Sheung Wan<br>
+      One Stylist. One Client. One Experience.
+    </div>
+  </div>
+</body>
+</html>
