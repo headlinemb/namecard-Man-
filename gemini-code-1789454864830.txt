@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Man;Stylist;;;
+FN:Stylist Man | Headline Hair Salon
+ORG:Headline Hair Salon
+TITLE:Co-Founder & Senior Stylist
+TEL;TYPE=CELL,VOICE:+85269991747
+ADR;TYPE=WORK:;;50 Jervois Street;Sheung Wan;;;Hong Kong
+URL:https://www.instagram.com/headline__hair
+NOTE:One Stylist. One Client. One Experience.
+END:VCARD
