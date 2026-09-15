@@ -1,106 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-HK">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylist Man | Headline Hair Salon</title>
+  <title>Man Wong | Headline Hair Salon</title>
   <style>
     :root {
-      --bg: #F7F4EE;
+      --bg: #F9F6F0;
       --card-bg: #FFFFFF;
-      --text-main: #3C2A21;
-      --text-muted: #7D6E65;
-      --accent: #5C4033;
+      --brand-brown: #603813;
+      --brand-brown-light: #7a4a1c;
+      --text-muted: #8C7A6B;
+      --border-color: #EFE7DE;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
       background-color: var(--bg);
-      color: var(--text-main);
+      color: var(--brand-brown);
       display: flex;
       justify-content: center;
-      padding: 30px 16px;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px 16px;
     }
     .card {
       background: var(--card-bg);
       width: 100%;
-      max-width: 390px;
-      border-radius: 24px;
-      padding: 32px 24px;
-      box-shadow: 0 10px 30px rgba(60, 42, 33, 0.05);
+      max-width: 380px;
+      border-radius: 28px;
+      padding: 36px 24px 28px;
+      box-shadow: 0 12px 36px rgba(96, 56, 19, 0.08);
       text-align: center;
     }
-    .brand {
-      letter-spacing: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 24px;
-    }
-    .avatar {
-      width: 96px;
-      height: 96px;
+    .avatar-wrapper {
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      background: #EAE5DC;
-      margin: 0 auto 16px;
+      background: #FAF6F0;
+      border: 1.5px solid var(--border-color);
+      margin: 0 auto 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      color: var(--accent);
+      overflow: hidden;
+      padding: 10px;
     }
-    h1 { font-size: 22px; margin-bottom: 4px; }
-    p.sub { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
-    .btn-save {
-      display: block;
-      background: var(--accent);
-      color: #FFF;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 12px;
+    .avatar-logo {
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      font-size: 24px;
       font-weight: 600;
-      font-size: 15px;
-      margin-bottom: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      color: var(--brand-brown);
     }
-    .links { display: flex; flex-direction: column; gap: 12px; }
-    .link-item {
+    p.title {
+      font-size: 14px;
+      color: var(--brand-brown-light);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    p.exp {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+    }
+    .btn-save {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 13px;
-      border: 1px solid #EAE5DC;
-      border-radius: 12px;
+      gap: 8px;
+      background: var(--brand-brown);
+      color: #FFFFFF;
       text-decoration: none;
-      color: var(--text-main);
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+      transition: background 0.2s ease;
+    }
+    .btn-save:hover {
+      background: var(--brand-brown-light);
+    }
+    .btn-save svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .link-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--brand-brown);
+      background-color: #FCFAF7;
+      transition: all 0.2s ease;
+    }
+    .link-row:hover {
+      background-color: #F5EFE6;
+      border-color: #E2D5C5;
+      transform: translateY(-1px);
+    }
+    .link-icon {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+    .link-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .link-text {
       font-size: 14px;
       font-weight: 500;
+      text-align: left;
+      flex-grow: 1;
+    }
+    .arrow {
+      color: #C2B3A3;
+      font-size: 14px;
     }
     .footer {
       margin-top: 24px;
-      font-size: 12px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-color);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
       color: var(--text-muted);
-      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="brand">HEADLINE HAIR SALON</div>
-    <div class="avatar">✂️</div>
-    <h1>Stylist Man</h1>
-    <p class="sub">Senior Stylist & Co-Founder<br>15+ Years Experience</p>
+    <div class="avatar-wrapper">
+      <!-- Headline Brand Logo -->
+      <svg class="avatar-logo" viewBox="0 0 280 80" fill="#603813" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="34" letter-spacing="9">HEADLINE</text>
+        <text x="50%" y="70" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="14" letter-spacing="4">HAIR SALON</text>
+      </svg>
+    </div>
 
-    <a href="contact.vcf" class="btn-save" download>＋ Save to Contacts / 存入通訊錄</a>
+    <h1>Man Wong</h1>
+    <p class="title">Senior Stylist</p>
+    <p class="exp">15+ Years Experience</p>
 
-    <div class="links">
-      <a href="https://wa.me/85269991747?text=Hi%20Man%2C%20I%20would%20like%20to%20book%20an%20appointment" class="link-item">💬 WhatsApp Direct Booking</a>
-      <a href="https://www.instagram.com/headline__hair" class="link-item">📸 Instagram Portfolio</a>
-      <a href="https://maps.google.com/?q=50+Jervois+Street+Sheung+Wan+Hong+Kong" class="link-item">📍 Find Us in Sheung Wan</a>
+    <a href="contact.vcf" class="btn-save" download>
+      <svg viewBox="0 0 24 24"><path d="M19 12v7H5v-7H3v7c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2v9.67z"/></svg>
+      Save to Contacts / 存入通訊錄
+    </a>
+
+    <div class="links-grid">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/85269991747?text=Hi%20Man%2C%20I%20would%20like%20to%20book%20an%20appointment" class="link-row" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="#25D366"><path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.996.586 3.867 1.602 5.441L2 22l4.672-1.551A9.99 9.99 0 0 0 12.031 22C17.566 22 22 17.504 22 12.031 22 6.496 17.566 2 12.031 2zm5.789 14.184c-.242.684-1.211 1.258-1.996 1.422-.543.109-1.25.199-3.633-.789-3.047-1.266-5.016-4.359-5.168-4.566-.148-.207-1.242-1.652-1.242-3.152 0-1.5 1.055-2.234 1.426-2.543.375-.309.82-.387 1.094-.387.273 0 .547.004.789.016.258.012.602-.098.941.719.348.832 1.184 2.898 1.293 3.117.109.219.184.477.035.773-.148.297-.223.484-.441.742-.219.258-.461.578-.656.777-.219.219-.445.457-.191.895.254.438 1.129 1.863 2.426 3.016 1.664 1.48 3.07 1.941 3.508 2.156.438.219.695.184.953-.113.258-.297 1.102-1.285 1.398-1.727.297-.438.598-.367 1.004-.219.406.148 2.582 1.219 3.027 1.441.445.219.742.328.852.516.109.188.109 1.074-.133 1.758z"/></svg>
+        </span>
+        <span class="link-text">WhatsApp 預約 / 諮詢</span>
+        <span class="arrow">›</span>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/headline__hair" class="link-row" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span>
+        <span class="link-text">Instagram Portfolio</span>
+        <span class="arrow">›</span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/headlinehairsalon" class="link-row" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </span>
+        <span class="link-text">Facebook 專頁</span>
+        <span class="arrow">›</span>
+      </a>
+
+      <!-- Google Maps -->
+      <a href="https://www.google.com/maps/place/Headline+Hair+Salon+%E4%B8%8A%E7%92%B0/@22.2848747,114.1493712,17z/data=!3m1!4b1!4m6!3m5!1s0x3404007c6929d70b:0x26e6d0632556c6c7!8m2!3d22.2848747!4d114.1519461!16s%2Fg%2F11f04pbn3z?hl=zh-TW&entry=ttu" class="link-row" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="#EA4335"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </span>
+        <span class="link-text">Google Maps 到店導航</span>
+        <span class="arrow">›</span>
+      </a>
     </div>
 
     <div class="footer">
-      50 Jervois Street, Sheung Wan<br>
-      One Stylist. One Client. One Experience.
+      Headline Hair Salon · Sheung Wan
     </div>
   </div>
 </body>
