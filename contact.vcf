@@ -6,7 +6,11 @@ ORG:Headline Hair Salon
 TITLE:Co-founder and Senior Stylist
 TEL;TYPE=CELL,VOICE:+85269991747
 ADR;TYPE=WORK:;;50 Jervois Street;Sheung Wan;;;Hong Kong
-URL:https://www.instagram.com/headline__hair
-PHOTO;VALUE=URI:https://headlinemb.github.io/namecard-Man-/logo.jpg
-NOTE:One Stylist. One Client. One Experience.
+GEO:22.2848747;114.1519461
+URL;TYPE=WhatsApp:https://wa.me/85269991747?text=Hi%20Man%2C%20I%20would%20like%20to%20book%20an%20appointment
+URL;TYPE=Location:https://maps.google.com/?q=22.2848747,114.1519461
+URL;TYPE=Instagram:https://www.instagram.com/headline__hair
+URL;TYPE=Facebook:https://www.facebook.com/HEADLINEMB
+PHOTO;VALUE=URI:https://headlinemb.github.io/namecard-Man-/HEADLINE%20new%20logo%20(2).png
+NOTE:One Stylist. One Client. One Experience.\n\nWhatsApp: https://wa.me/85269991747\nLocation: 50 Jervois Street, Sheung Wan (https://maps.google.com/?q=22.2848747,114.1519461)
 END:VCARD
