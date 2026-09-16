@@ -34,8 +34,8 @@
       text-align: center;
     }
     .avatar-wrapper {
-      width: 90px;
-      height: 90px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       background: #FAF6F0;
       border: 1.5px solid var(--border-color);
@@ -44,11 +44,13 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      padding: 10px;
+      box-shadow: 0 4px 12px rgba(96, 56, 19, 0.06);
     }
-    .avatar-logo {
+    .avatar-img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     h1 {
       font-size: 24px;
@@ -146,11 +148,7 @@
 <body>
   <div class="card">
     <div class="avatar-wrapper">
-      <!-- Headline Brand Logo -->
-      <svg class="avatar-logo" viewBox="0 0 280 80" fill="#603813" xmlns="http://www.w3.org/2000/svg">
-        <text x="50%" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="34" letter-spacing="9">HEADLINE</text>
-        <text x="50%" y="70" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="14" letter-spacing="4">HAIR SALON</text>
-      </svg>
+      <img src="logo.jpg" alt="Headline Hair Salon Logo" class="avatar-img">
     </div>
 
     <h1>Man Wong</h1>
